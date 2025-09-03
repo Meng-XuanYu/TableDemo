@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 高级简洁风格 */
+@layer base {
+  * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2.5 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-sm;
+  }
+  
+  .btn-primary {
+    @apply bg-slate-900 text-white hover:bg-slate-800 focus:ring-slate-500 shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 focus:ring-slate-500;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-2 text-sm;
+  }
+  
+  .input {
+    @apply px-4 py-2.5 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent bg-white transition-all;
+  }
+  
+  .select {
+    @apply px-4 py-2.5 border-2 border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-gradient-to-b from-white to-slate-50 transition-all duration-200 appearance-none cursor-pointer font-medium text-slate-700;
+    background-image: linear-gradient(45deg, transparent 50%, #475569 50%), linear-gradient(135deg, #475569 50%, transparent 50%);
+    background-position: calc(100% - 16px) calc(1em + 2px), calc(100% - 11px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    padding-right: 36px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .select:hover {
+    @apply border-slate-400 bg-gradient-to-b from-slate-50 to-slate-100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .select:focus {
+    @apply ring-2 ring-blue-500 border-blue-500 bg-white;
+    background-image: linear-gradient(45deg, transparent 50%, #1d4ed8 50%), linear-gradient(135deg, #1d4ed8 50%, transparent 50%);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .select:disabled {
+    @apply bg-slate-100 border-slate-200 text-slate-400 cursor-not-allowed;
+    background-image: linear-gradient(45deg, transparent 50%, #cbd5e1 50%), linear-gradient(135deg, #cbd5e1 50%, transparent 50%);
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-100 p-8;
+  }
+  
+  .table-header {
+    @apply bg-slate-50 border-b border-slate-200;
+  }
+  
+  .table-row {
+    @apply border-b border-slate-100 hover:bg-slate-50/50 transition-colors duration-200;
+  }
+  
+  .table-row:last-child {
+    @apply border-b-0;
+  }
+  
+  .upload-area {
+    @apply border-2 border-dashed border-slate-300 rounded-2xl bg-slate-50 hover:border-slate-400 hover:bg-slate-100 transition-all;
+  }
+}
