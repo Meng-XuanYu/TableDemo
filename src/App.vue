@@ -54,7 +54,8 @@ export default {
       currentLanguage,
       switchLanguage,
       t,
-      languageOptions
+      languageOptions,
+      
     }
   }
 }
